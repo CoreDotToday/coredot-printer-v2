@@ -32,7 +32,7 @@ python build_release.py
 
 Before a release build, run the manual checklist in `docs/smoke-test.md` on a real Windows machine. The src repo also has GitHub Actions CI (`.github/workflows/ci.yml`): unit tests + full import on `windows-latest` for every push; Nuitka build with exe artifact on `v*` tags or manual dispatch.
 
-**Release flow**: bump `VERSION` in `src/app/__init__.py` + update `src/app/changelog.py` and `CHANGELOG.md` → build on Windows (`build_release.py` also produces `src/release/CoreDotPrinter-<tag>.exe`) → smoke test → publish from WSL with `scripts/publish_release.sh` (tag = major.minor, notes auto-extracted from `CHANGELOG.md`; `--dry-run` to preview).
+**Release flow**: bump `VERSION` in `src/app/__init__.py` + update `src/app/changelog.py` and `CHANGELOG.md` → build on Windows (`build_release.py` also produces `src/release/CoreDotPrinter-<tag>.exe`) → smoke test → publish from WSL with `scripts/publish_release.sh` (tag = full version e.g. `2.10.3` since 2.10.3 — earlier releases used major.minor, notes auto-extracted from `CHANGELOG.md`; `--dry-run` to preview).
 
 Dependencies (pinned in `src/requirements.txt`): `fastapi`, `uvicorn[standard]`, `python-multipart`, `pillow`, `pywin32`, `customtkinter`, `qrcode`; build-time: `nuitka`, `ordered-set`.
 

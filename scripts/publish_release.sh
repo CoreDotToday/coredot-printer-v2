@@ -17,7 +17,7 @@ DRY_RUN=0
 # 버전은 src/app/__init__.py의 VERSION이 단일 출처
 VERSION=$(sed -n 's/^VERSION = "\(.*\)"$/\1/p' src/app/__init__.py)
 [[ -n "$VERSION" ]] || { echo "[ERROR] src/app/__init__.py에서 VERSION을 찾지 못했습니다."; exit 1; }
-TAG=$(echo "$VERSION" | cut -d. -f1,2)   # 태그 관례: 2.4.0 → 2.4
+TAG="$VERSION"   # 태그는 판 번호 그대로 (2.10.3 부터 — 앞 두 자리면 2.10.x 를 이어 올릴 수 없다)
 ASSET="src/release/CoreDotPrinter-${TAG}.exe"
 TITLE="프린터 서버"
 
