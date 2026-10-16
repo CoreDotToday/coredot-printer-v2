@@ -4,7 +4,7 @@
 
 ## 다운로드
 
-[Releases](https://github.com/CoreDotToday/coredot-printer/releases)에서 `CoreDotPrinter-<버전>.exe` 다운로드
+[Releases](https://github.com/CoreDotToday/coredot-printer-v2/releases)에서 `CoreDotPrinter-<버전>.exe` 다운로드
 
 ## 사용법
 
@@ -40,7 +40,7 @@ curl -X POST -F "file=@image.png" http://localhost:8000/print-image
 실서버는 Windows 전용입니다. 맥·리눅스에서 키오스크 앱을 개발할 때는 모의 서버를 사용하세요 (Python 3.9+만 필요):
 
 ```bash
-curl -O https://raw.githubusercontent.com/CoreDotToday/coredot-printer/main/dev/printer_mock.py
+curl -O https://raw.githubusercontent.com/CoreDotToday/coredot-printer-v2/main/dev/printer_mock.py
 python3 printer_mock.py
 ```
 
@@ -55,7 +55,7 @@ python3 printer_mock.py
 
 ## 소스
 
-소스 코드는 비공개 저장소 [coredot-printer-src](https://github.com/CoreDotToday/coredot-printer-src)에서 관리합니다 (이 저장소의 `src/`에 체크아웃).
+소스 코드는 비공개 저장소 [coredot-printer-src-v2](https://github.com/CoreDotToday/coredot-printer-src-v2)에서 관리합니다 (이 저장소의 `src/`에 체크아웃).
 
 ---
 

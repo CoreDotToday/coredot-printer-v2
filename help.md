@@ -126,4 +126,4 @@ curl "http://localhost:8000/print-jobs/<job_id>"
 
 ## 문의
 
-- GitHub Issues: https://github.com/CoreDotToday/coredot-printer/issues
+- GitHub Issues: https://github.com/CoreDotToday/coredot-printer-v2/issues
