@@ -13,13 +13,13 @@
 | 사진이 옆으로 인쇄됨 | v2.8.0부터 휴대폰 사진의 회전 정보(EXIF)를 자동 반영합니다. 최신 버전으로 업데이트 |
 | 자동 실행이 안 됨 | exe를 옮기거나 이름을 바꿨다면 앱을 한 번 실행하면 경로가 자동 갱신됩니다 |
 | 더블클릭해도 아무것도 안 뜸 | 아래 **"실행해도 아무것도 안 뜰 때"** 절 참고 |
-| 원인을 모르겠음 | exe 옆 `startup.log`(기동 단계), `server.log`(요청·인쇄 기록), `error.log`·`error.log.1`(오류)을 고객지원에 전달 |
+| 원인을 모르겠음 | `%LOCALAPPDATA%\CoreDotPrinter\logs` 의 `startup.log`(기동 단계), `server.log`(요청·인쇄 기록), `error.log`·`error.log.1`(오류)을 고객지원에 전달 (2.10.11 을 10-28 다시 낸 판부터 — 그 전 판은 exe 옆) |
 
 ## 실행해도 아무것도 안 뜰 때
 
 v2.9.0부터 더블클릭 직후 "시작하는 중" 창이 먼저 뜹니다. 첫 실행은 파일을 준비하느라 수십 초 걸릴 수 있고, 두 번째부터는 바로 뜹니다. 그래도 안 뜨면 순서대로 확인하세요.
 
-1. **`startup.log` 확인** — exe 옆, 없으면 `%LOCALAPPDATA%\CoreDotPrinter\` (탐색기 주소창에 그대로 입력).
+1. **`startup.log` 확인** — `%LOCALAPPDATA%\CoreDotPrinter\logs` (탐색기 주소창에 그대로 입력), 없으면 exe 옆 (예전 판).
    - 파일 자체가 없음 → 프로그램이 시작조차 못 한 것. 백신 보호 기록, SmartScreen, 회사 PC의 AppLocker 정책을 확인하세요.
    - 마지막 줄이 `start` → 다음 단계 전에 멈춤. 같은 폴더의 `error.log`를 보세요.
    - 마지막 줄이 `FATAL …` → 오류 내용이 그 줄과 `error.log`에 있습니다.
